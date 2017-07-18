@@ -1,6 +1,21 @@
 //Please follow my code if you have doubt
 // Please comment bellow
 
+/*
+  Arduino Starter Kit example
+ Project 1  - Crystal Ball
+ 
+ This sketch is written to accompany Project 1 in the
+ Arduino Starter Kit
+ 
+ Parts required:
+ 220 ohm resistor
+ 10 kilohm resistor
+ 10 kilohm potentiometer
+ 16x2 LCD screen
+ tilt switch
+ 
+
 Date Created July 17, 2017
 Author by Jaguar Ako
 
