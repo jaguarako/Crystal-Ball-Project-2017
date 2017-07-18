@@ -1,0 +1,76 @@
+//Please follow my code if you have doubt
+// Please comment bellow
+
+Date Created July 17, 2017
+Author by Jaguar Ako
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12,11,5,4,3,2); // generates an instance 
+in the lcd
+
+const int switchPin = 6;
+int switchState = 0;
+int prevSwitchState = 0;
+int reply;
+void setup() {
+  lcd.begin(16,2);
+  
+  pinMode(switchPin, INPUT);
+  lcd.print("Preguntame");
+  lcd.setCursor(0,1); // changes the Cursor to continue 
+writing in the second row
+  lcd.print("Welcome sa Bayag");
+}
+void loop() {
+  switchState=digitalRead(switchPin);
+
+  if (switchState != prevSwitchState) {
+    if (switchState == LOW) {
+      reply = random(11);
+      lcd.clear(); // clears the writing
+      lcd.setCursor(0,0);
+      lcd.print("Laki ng Bayag mo:");
+      lcd.setCursor(0,1);
+
+      switch(reply){ // the program will enter the case 
+assigned to the switch
+        case 0:
+        lcd.print("Malaki");
+        break;
+        case 1:
+        lcd.print("Tingnan ko");
+        break;
+        case 2:
+        lcd.print("May gasgas");
+        break;
+        case 3:
+        lcd.print("Mabaho");
+        break;
+        case 4:
+        lcd.print("Walang Hugas");
+        break;
+        case 5:
+        lcd.print("Amoy Alimoong");
+        break;
+        case 6:
+        lcd.print("Melong Amoy");
+        break;
+        case 7:
+        lcd.print("Hindi Nga");
+        break;
+        case 8:
+        lcd.print("Hindi Naman");
+        break;
+        case 9:
+        lcd.print("Sige Amoyin mo");
+        break;
+        case 10:
+        lcd.print("Baho Nga");
+        break;
+      }
+    }
+  }
+  
+
+}
